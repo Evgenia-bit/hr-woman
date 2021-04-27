@@ -1,4 +1,5 @@
 
+
 const screenWidth = window.screen.width;
 const screenHeight = window.screen.height;
 const mediaQuery = window.matchMedia('(min-width: ' + screenWidth + 'px)')
@@ -39,14 +40,4 @@ window.addEventListener('resize', () => {
     }
 })
 
-/*кнопки запуска видео*/
-const videoButtons = document.querySelectorAll(".video-play");
-const videos = document.querySelectorAll("video");
-videoButtons.forEach((item, i) => {
-    item.addEventListener("click", () => {
-
-        item.style.display = 'none';
-        videos[i].play();
-    })
-})
 

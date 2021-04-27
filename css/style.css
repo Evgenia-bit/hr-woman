@@ -4,6 +4,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@font-face {
+  font-family: 'Arial';
+  src: local("../fonts/Arial Regular"), local("../fonts/Arial-Regular"), url("../fonts/ArialMT.woff2") format("woff2"), url("../fonts/ArialMT.woff") format("woff"), url("../fonts/ArialMT.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Arial Italic';
+  src: local("../fonts/Arial Italic"), local("../fonts/Arial-Italic"), url("../fonts/Arial-ItalicMT.woff2") format("woff2"), url("../fonts/Arial-ItalicMT.woff") format("woff"), url("Arial-ItalicMT.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Arial Black';
+  src: url("../fonts/Arial-Black.eot");
+  src: url("../fonts/Arial-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Arial-Black.woff") format("woff"), url("../fonts/Arial-Black.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -95,38 +117,6 @@ button:focus, input:focus, select:focus, video:focus {
 
 .no-form-tablet {
   display: block;
-}
-
-video {
-  position: relative;
-}
-
-.video-play {
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -150%);
-          transform: translate(-50%, -150%);
-  background-color: rgba(43, 51, 63, 0.7);
-  width: 86px;
-  height: 41px;
-  position: absolute;
-  border: .06666em solid #fff;
-  border-radius: .3em;
-  -webkit-transition: all .4s;
-  transition: all .4s;
-}
-
-.video-play:hover {
-  background-color: #696e76b3;
-}
-
-.video-play::before {
-  content: '';
-  position: absolute;
-  left: 35px;
-  bottom: 8px;
-  border: 10px solid transparent;
-  border-left: 14px solid #fff;
 }
 
 .modal-wrap {
@@ -270,14 +260,133 @@ video {
 
 .h-top .first-screen-main-top {
   text-align: right;
+  margin-top: 20px;
+  margin-bottom: -40px;
 }
 
 .h-top .first-screen-main__title {
-  font-family: Arial;
+  font-family: 'Arial Italic';
+  font-size: 30px;
+  color: #242458;
+  line-height: .8;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.h-top .first-screen-main h1 {
+  font-family: 'Arial Black';
+  font-size: 75px;
+  line-height: .6;
+  text-align: center;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #EC000D;
+}
+
+.h-top .first-screen-main h2 {
+  font-family: 'Arial Black';
+  line-height: .8;
+  font-size: 75px;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: #FFF910;
+  text-shadow: 0px 0px 5px #0085FF;
+}
+
+.h-top .first-screen-main__subtitle {
+  font-family: 'Arial Italic';
+  font-size: 26px;
+  line-height: 1;
+  color: #242458;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.h-top .first-screen-main-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 60px;
+}
+
+.h-top .first-screen-main-center img {
+  height: 340px;
+  position: relative;
+  z-index: 2;
+}
+
+.h-top .first-screen-main__list {
+  margin-left: -60px;
+  margin-top: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.h-top .first-screen-main .list-item {
+  background-image: url("../img/first-screen/list-item-bg.png");
+  background-repeat: no-repeat;
+  background-position: 100% auto;
+  background-size: contain;
+  color: #21211F;
+  text-align: left;
+  padding-left: 100px;
+  width: 450px;
+}
+
+.h-top .first-screen-main .list-item .mark {
+  height: 50px;
+}
+
+.h-top .first-screen-main__text {
+  width: 250px;
+  padding-top: 5px;
+  padding-bottom: 12px;
+}
+
+.h-top .first-screen-main__text h3 {
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 500;
+  font-family: 'Bebas Neue', cursive;
   font-style: italic;
-  font-weight: normal;
-  font-size: 89px;
-  line-height: 127.6%;
+  margin: 0;
+}
+
+.h-top .first-screen-main__text p {
+  font-family: 'Oswald', sans-serif;
+  font-style: italic;
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.h-top .first-screen-main-bottom {
+  background-image: url("../img/first-screen/arrow.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 530px;
+  margin-left: 100px;
+  text-transform: uppercase;
+  color: #030370;
+  text-align: left;
+  padding-left: 40px;
+  margin-top: -25px;
+}
+
+.h-top .first-screen-main-bottom .upper-text {
+  font-family: 'Oswald', sans-serif;
+  font-size: 38px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.h-top .first-screen-main-bottom .lower-text {
+  font-family: 'Oswald', sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1;
+  padding-bottom: 10px;
 }
 
 .h-top .first-screen-mob {
@@ -314,6 +423,8 @@ video {
   margin: 0 0 15px -25px;
   background: #fff;
   border-radius: 20px 20px 0 0;
+  position: relative;
+  z-index: 3;
 }
 
 .main-form__header {
@@ -456,12 +567,16 @@ video {
   margin: 0 auto;
 }
 
-.proof__title img {
-  width: 100%;
+.proof__title h2 {
+  text-align: center;
+  color: #E80A03;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 66px;
 }
 
 .proof__subtitle h3 {
-  color: #ff6600;
+  color: #0768F9;
   font-size: 1.4rem;
   font-weight: 700;
   font-family: 'Oswald', sans-serif;
@@ -487,7 +602,6 @@ video {
 
 /*section About Product*/
 .about-product {
-  background-color: #6dcff6;
   padding-top: 50px;
   padding-bottom: 50px;
   color: #06407D;
@@ -498,7 +612,7 @@ video {
 }
 
 .about-product__title {
-  color: #fff;
+  color: #FF7043;
   font-size: 1.8rem;
   font-weight: 700;
   font-family: 'Oswald', sans-serif;
@@ -519,20 +633,14 @@ video {
 
 .about-product p span {
   text-decoration: underline;
-  font-weight: 700;
 }
 
 .about-product p:last-child {
   font-weight: 700;
 }
 
-.about-product .magzine-men_fin {
-  margin-top: 30px;
-  margin-left: 70px;
-}
-
-.about-product .main-btn-wrap {
-  margin-left: 70px;
+.about-product .magzine {
+  width: 90%;
 }
 
 /*blue title*/
@@ -621,8 +729,8 @@ video {
 
 /*section  How It Works?*/
 .how-it-works {
-  background: url("../img/bg/bg1.jpg") no-repeat center center;
-  background-size: cover;
+  background: url("../img/bg/bg1.jpg") no-repeat 100%;
+  background-size: contain;
   padding: 40px 0 10px;
 }
 
@@ -637,15 +745,14 @@ video {
 .how-it-works__title {
   line-height: 1.2em;
   font-size: 2.33rem;
-  font-weight: 300;
+  font-weight: 700;
   color: #28598E;
-  font-family: 'Arimo', sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
 
 .how-it-works__title span {
-  color: #0064f9;
-  font-weight: 700;
-  font-family: "Roboto",sans-serif;
+  font-family: 'Oswald', sans-serif;
+  color: #E80A03;
 }
 
 .how-it-works__text {
@@ -687,67 +794,90 @@ video {
   margin-bottom: 5px;
 }
 
-/*section Q&A*/
-.q-and-a {
-  padding: 30px 0;
-  margin-bottom: -30px;
-  background-color: #f2f9ff;
-}
-
-.q-and-a .container {
-  display: grid;
-  display: -ms-grid;
-  gap: 10px;
-  grid-template-columns: 8fr 1fr;
-  -ms-grid-columns: 8fr 10px 1fr;
-}
-
-.q-and-a__content {
-  color: #376496;
-  font-size: 1.4rem;
-  line-height: 1.4em;
-  font-family: 'Arimo', sans-serif;
-}
-
-.q-and-a__content .orange-text {
-  color: #ff6600;
-  font-weight: 600;
-  font-family: arial;
-}
-
 /*section What to expect*/
 .what-to-expect {
   margin-top: 25px;
   background-image: url("../img/bg/bg2.jpg");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 100% 100%;
+  background-size: auto 100%;
+  position: relative;
+  z-index: 1;
+  margin-bottom: -70px;
+  max-height: 600px;
 }
 
-.what-to-expect .container {
-  display: none;
+.what-to-expect .what-to-expect__content {
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: 0;
 }
 
-.what-to-expect__bg-mob {
-  display: none;
+.what-to-expect__title {
+  color: #F22384;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+}
+
+.what-to-expect__subtitle {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+}
+
+.what-to-expect__upper-text {
+  color: #83C407;
+  font-size: 20px;
+}
+
+.what-to-expect__lower-text {
+  font-size: 21.5px;
+  font-family: 'Arial', sans-serif;
+  display: block;
+  margin-left: 30px;
+}
+
+.what-to-expect__lower-text span {
+  font-weight: 700;
+  font-style: normal;
+}
+
+.what-to-expect__lower-text b {
+  margin-left: auto;
+  display: block;
+  font-size: 26px;
+  font-weight: normal;
+}
+
+.what-to-expect__list {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 10px auto;
+  line-height: 1 !important;
+}
+
+.what-to-expect__list li {
+  min-width: 200px;
+  position: relative;
+  list-style-image: url("../img/list-marker/check.jpg");
+  margin: 15px 0;
+}
+
+.what-to-expect__list li span {
+  font-family: 'Arial', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
 }
 
 /*section HAIR RESCUE RX*/
 .hair-rescue {
-  padding-bottom: 40px;
-  color: #3d3d3d;
-  font-size: 31px;
-  font-family: 'Arimo', sans-serif;
-  font-weight: 400;
-}
-
-.hair-rescue .orange-text {
-  font-weight: 600;
-  color: #ff6600;
-}
-
-.hair-rescue .blue-text {
-  color: #0064f9;
+  padding: 50px 0;
+  background: #6DCFF6;
+  color: #fff;
+  font-size: 1.1rem;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
 }
 
 /*section about efficiency*/
@@ -1501,8 +1631,8 @@ video {
   .about-product__content {
     width: 441px;
   }
-  .about-product .magzine-men_fin {
-    width: 498px;
+  .magzine {
+    width: 498px !important;
     margin-left: 50px;
   }
   .real-stories .video-wrap {
@@ -1532,31 +1662,6 @@ video {
     display: block;
   }
   .no-form-tablet {
-    display: none;
-  }
-  .main-form {
-    width: 282px;
-    margin: 50px 0 0 -75px;
-  }
-  .main-form input, .main-form select {
-    width: 232px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .main-form .for-form {
-    width: 210px;
-  }
-  .h-top {
-    background-image: none !important;
-    background-color: #ebf5ff;
-    background-position: 100% 100%;
-  }
-  .h-top .for-tablet {
-    top: 0;
-    position: absolute;
-    z-index: 1;
-  }
-  .h-top .first-screen-main {
     display: none;
   }
   .h-bottom {
@@ -1589,65 +1694,6 @@ video {
   }
   .hair-rescue {
     margin-top: -100px;
-  }
-  .what-to-expect {
-    background-image: url("../img/bg/WhatToExpect.png");
-    background-size: cover;
-    margin-bottom: -30px;
-    position: relative;
-  }
-  .what-to-expect__subtitle {
-    display: none;
-  }
-  .what-to-expect__list {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    margin: 10px auto;
-    line-height: 1 !important;
-  }
-  .what-to-expect__list li {
-    min-width: 200px;
-    position: relative;
-  }
-  .what-to-expect__list li span {
-    font-family: 'Arimo', sans-serif;
-    font-weight: 600;
-    font-size: 22px;
-    color: #0e437e;
-    list-style-image: url("../img/list-marker/check mark white no bkr.png");
-  }
-  .what-to-expect .container {
-    display: block;
-    width: 450px;
-    position: absolute;
-    right: 0;
-    top: 170px;
-  }
-  .what-to-expect .container p {
-    font-size: 21.5px;
-    font-family: 'Arimo', sans-serif;
-    color: #0e437e;
-    width: 370px;
-    display: block;
-  }
-  .what-to-expect .container p span {
-    font-weight: 700;
-    font-style: normal;
-  }
-  .what-to-expect .container p b {
-    width: 320px;
-    margin-left: auto;
-    display: block;
-    font-size: 26px;
-    font-weight: normal;
-    font-style: italic;
-  }
-  .what-to-expect .container h2 {
-    display: none;
-  }
-  .what-to-expect .container img {
-    display: none;
   }
   .pharmacist-recommended​__text br {
     display: block;
@@ -1741,9 +1787,6 @@ video {
   }
   .about-efficiency__content li span {
     font-size: 1.30rem;
-  }
-  .what-to-expect img {
-    width: 100%;
   }
   .feedback-wrap {
     -ms-grid-columns: 1fr;
@@ -1843,7 +1886,7 @@ video {
   .about-product__content {
     width: 441px;
   }
-  .about-product .magzine-men_fin {
+  .about-product .magzine {
     margin-left: 150px;
   }
   .about-product .container {
@@ -1907,80 +1950,6 @@ video {
   }
   .about-efficiency__title {
     display: block !important;
-  }
-  .hair-rescue {
-    display: none;
-  }
-  .what-to-expect {
-    background-image: none !important;
-    background-color: #6dcff6;
-    height: auto !important;
-    padding: 40px 0;
-    position: static;
-  }
-  .what-to-expect .container {
-    display: block;
-    position: static !important;
-    width: 100% !important;
-  }
-  .what-to-expect .container h2 {
-    display: block !important;
-  }
-  .what-to-expect .container img {
-    display: block !important;
-    width: 100%;
-    margin: 0 auto;
-  }
-  .what-to-expect__title {
-    color: #fff;
-    font-family: 'Oswald', sans-serif;
-    font-size: 2.33rem;
-    line-height: 1.4em;
-    font-weight: 600;
-    text-align: center;
-    display: block;
-  }
-  .what-to-expect__subtitle {
-    display: block !important;
-    text-align: center;
-    font-size: 1.6rem;
-    font-family: 'Arimo', sans-serif;
-    color: #0e437e;
-    font-style: italic;
-  }
-  .what-to-expect p {
-    width: 100% !important;
-    font-size: 0.8rem;
-    font-family: 'Arimo', sans-serif;
-    color: #0e437e;
-    margin: 0;
-  }
-  .what-to-expect p b {
-    font-family: 'Roboto', sans-serif;
-    color: #4B6A71;
-    font-size: 1rem;
-    margin-left: 0 !important;
-  }
-  .what-to-expect p b br {
-    display: none;
-  }
-  .what-to-expect__list {
-    margin-left: 50px !important;
-  }
-  .what-to-expect__list li {
-    list-style-image: url("../img/list-marker/marker2.jpg") !important;
-    font-size: 20px;
-    font-family: 'Arimo', sans-serif;
-    font-weight: 500;
-    color: #353535;
-    padding: 10px;
-  }
-  .what-to-expect__bg-mob {
-    display: block;
-    width: 100%;
-  }
-  .what-to-expect .container {
-    display: none;
   }
   .feedback__content-wrap {
     -webkit-box-orient: vertical;
@@ -2136,7 +2105,7 @@ video {
   .about-product p {
     font-size: 0.95rem;
   }
-  .about-product .magzine-men_fin {
+  .about-product .magzine {
     margin: 0 auto;
     width: 100%;
   }
