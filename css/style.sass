@@ -1,0 +1,2072 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap');
+*
+    box-sizing: border-box
+    padding: 0
+    margin: 0
+    font-family: "Roboto",sans-serif
+body
+    width: 100vw
+    overflow-x: hidden
+    
+button:focus, input:focus, select:focus, video:focus
+    outline: none
+
+/*main-color*/
+$orange: #ff6600
+$brightBlue: #0064f9
+/*red button*/
+.wrapper
+    margin: 0 auto
+.main-btn
+    background: rgb(255, 26, 13)
+    color: #fff
+    font-weight: 700
+    border: none
+    width: 280px
+    height: 60px
+    
+    border-radius: 2px
+    animation: animated-btn 1s infinite
+    &-wrap
+        height: 90px
+        display: flex
+        justify-content: center
+        align-items: center
+    a
+        font-size: 22px
+        font-family: "Oswald", sans-serif !important
+        text-decoration: none
+        color: #fff
+        display: block
+/*fixed button*/
+.fixed-btn
+    display: none
+    position: fixed
+    bottom: 20px
+    left: 0
+    right: 0
+    margin: 0 
+    z-index: 20
+    width: 100%
+    
+    .main-btn
+        font-family: 'Oswald', sans-serif
+        font-size: 24px
+        font-weight: 700 
+        width: 280px 
+        height: 60px
+/*red button for form*/
+.for-form
+    width: 270px
+    height: 80px
+    font-weight: 500
+    font-size: 24px   
+    font-family: "Roboto",sans-serif 
+.for-tablet
+    display: none
+.no-form-tablet
+    display: block
+video
+    position: relative
+.video-play
+        top: 50%
+        left: 50%                    
+        transform: translate(-50%, -150%) 
+        background-color: rgba(43,51,63,.7)
+        width: 86px
+        height: 41px
+        position: absolute
+        border: .06666em solid #fff
+        border-radius: .3em
+        transition: all .4s
+.video-play:hover
+        background-color: #696e76b3
+.video-play::before
+    content: ''
+    position: absolute /* Абсолютное позиционирование */
+    left: 35px
+    bottom: 8px /* Положение треугольника */
+    border: 10px solid transparent
+    border-left: 14px solid #fff
+
+.modal-wrap
+    display: none
+    background: rgba(0,0,0,.4)
+    cursor: pointer
+    height: 100%
+    width: 100%
+    position: fixed
+    top: 0
+    z-index: 99
+    .close
+        color: #000
+        background-color: #fff
+        border: 3px solid #999
+        border-radius: 50px
+        font-size: 18px
+        line-height: 30px
+        width: 30px
+        height: 30px
+        text-align: center
+        cursor: pointer
+        position: absolute
+        top: 0
+        right: 0
+        z-index: 100
+    .tr
+        display: none !important
+    .modal
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        display: block
+        background-color: #fff
+        box-shadow: 10px 10px 60px #555
+        max-width: 900px
+        height: 600px
+        width: 80%  
+        border-radius: 8px
+        padding: 20px
+        overflow-y: scroll
+        font-size: 14px !important
+        line-height: 1.4em
+        p
+            margin: 0 auto
+        h1
+                font-size: 2em
+                margin: 0.67em 0
+.modal-wrap.open
+    display: block 
+
+/*animation red button*/
+    
+@keyframes animated-btn
+    0%
+       transform: scale3d(1, 1, 1) 
+    50%
+        transform: scale3d(0.85, 0.85, 0.85) 
+    100%
+       transform: scale3d(1, 1, 1) 
+
+/*header (top)*/   
+.header-mob   
+    display: none
+    margin-bottom: -20px
+    &_top
+            background:     rgb(46, 98, 184)
+            color: #fff
+            font-family: arial
+            font-size: 0.77rem
+            text-align: center
+            padding: 7px
+    &_bottom
+            p
+                text-align: center
+                margin-top: 10px
+                font-family: oswald
+                font-size: 1.10rem
+                font-weight: bold
+                margin-bottom: 20px
+            img
+                width: 70%
+                margin: 0 auto 40px
+                display: block
+.h-top
+    padding-top: 50px
+    background-image: url("../img/first-screen/first-screen-girl.png")
+    background-repeat: no-repeat
+    background-position:  center top
+    background-size: cover
+    .first-screen-main
+        margin-top: -5px
+        margin-right: -5px
+        width: 630px
+        &-top
+            text-align: right
+        &__title
+            font-family: Arial
+            font-style: italic
+            font-weight: normal
+            font-size: 89px
+            line-height: 127.6%
+    .first-screen-mob
+        display: none
+/*header (bottom)*/  
+.h-bottom
+    padding-top: 20px
+    padding-bottom: 30px
+    background: #f5f5f5
+    .h-bottom__text
+        color: #918F8F
+        font-family: 'Oswald', sans-serif
+        font-size: 21px
+        font-weight: 300
+    .as-seen-on
+        margin-top: 30px
+    .image-row-top 
+    .image-row-bottom img
+        margin-top: 20px
+        width: 81%
+/*main form*/
+.main-form
+    padding: 0 
+    width: 332px 
+    margin: 0 0 15px -25px
+    background: #fff
+    border-radius: 20px 20px 0 0
+    &__header
+        text-align: center
+        font-size: 1.4rem
+        line-height: 1.2
+        padding: 7px 15px 
+
+        width: 100%
+        margin-bottom: 7px
+        border-radius: 20px 20px 0 0
+        background: #3671B8
+        font-family: 'Oswald', sans-serif
+        font-weight: 600
+        font-stretch: extra-expanded
+        color: #fff
+    &__inputs
+        position: relative
+        background: #fff
+        display: grid
+        display: -ms-grid
+        justify-content: center
+        input, select
+            width: 282px
+            height: 38px
+            margin-bottom: 9px
+            padding: 0 10px 5px 45px
+            border: 1px solid rgba(0,0,0,0.2)
+            border-radius: 6px
+            &::placeholder 
+                color: rgba(0,0,0,0.4)
+                font-size: 14px
+                font-weight: 400
+            
+        select, input[name="state"] 
+            background: url('../img/inputs-icons/flag.jpg') no-repeat 10px 10px
+        select
+            appearance: none
+            position: relative
+            color: rgba(0,0,0,0.5)
+            font-family: 'Open Sans', sans-serif
+            font-size: 15px
+            z-index: 1
+        .points
+            color: rgba(0,0,0,0.3)
+            font-size: 28px
+            font-family: 'Oswald', sans-serif
+            position: absolute
+            right: 35px
+            top: -10px
+        .red-star
+            color: rgb(255, 26, 13)
+            position: absolute
+            font-size: 15px
+            font-weight: 700
+            &:nth-of-type(2)
+                top: 50px
+                right: 35px
+            &:nth-of-type(3)
+                top: 147px
+                right: 35px
+                
+        input[name="first-name"], input[name="last-name"]
+            background: url('../img/inputs-icons/user.jpg') no-repeat 10px 10px
+        input[name="email"] 
+            background: url('../img/inputs-icons/letter.jpg') no-repeat 10px 10px
+        input[name="address"] 
+            background: url('../img/inputs-icons/home.jpg') no-repeat  10px 10px
+        input[name="city"] 
+            background: url('../img/inputs-icons/geo.jpg') no-repeat 10px 10px
+        input[name="postal-code"] 
+            background: url('../img/inputs-icons/doc.jpg') no-repeat 10px 10px   
+        input[name="phone-number"] 
+            background: url('../img/inputs-icons/phone.jpg') no-repeat  10px 10px
+    .verified  
+        width: 100%
+        margin: 0  auto   
+        padding: 5px 
+/*section The Proof*/
+.proof
+    padding-top: 30px
+    padding-bottom: 50px
+    &__title
+        max-width: 504px
+        margin: 0 auto
+        img
+            width: 100%
+    &__subtitle h3
+        color: $orange
+        font-size: 1.4rem
+        font-weight: 700 
+        font-family: 'Oswald', sans-serif
+        br
+            display: none
+    &__text
+        
+        margin-top: 15px
+        margin-bottom: 30px
+        color: #353535
+        font-size: 1.2rem
+        font-weight: 300
+        font-family: 'Oswald', sans-serif
+    .video-play
+        transform: translate(-50%, -100%)
+       
+/*section About Product*/  
+.about-product
+    background-color: #6dcff6
+    padding-top: 50px
+    padding-bottom: 50px
+    color: #06407D
+    &__content
+        width: 535px
+    &__title
+        color: #fff
+        font-size: 1.8rem  
+        font-weight: 700 
+        font-family: 'Oswald', sans-serif
+    &__subtitle
+        display: block
+        margin-bottom: 25px
+        font-size: 1.2rem 
+        font-weight: 600 
+        font-family: 'Oswald', sans-serif
+    p 
+        font-size: 0.8rem
+        font-family: 'Arimo', sans-serif
+        span
+            text-decoration: underline
+            font-weight: 700
+        &:last-child
+           font-weight: 700 
+    .magzine-men_fin
+        margin-top: 30px
+        margin-left: 70px
+    .main-btn-wrap
+        margin-left: 70px
+    
+/*blue title*/
+.blue-title
+    color: $brightBlue
+    font-size: 1.8rem
+    font-weight: 700
+/*prange-subtitle*/ 
+.orange-subtitle
+    color: $orange
+    font-size: 1.4rem
+    line-height: 1.4em
+    font-weight: 700
+/*section  The Physicians Choice*/
+.physicians-choice
+    padding: 50px 0
+    &__subtitle
+        display: block
+        margin-bottom: 50px
+        font-size: 1.4rem
+    video
+        border: 25px solid #EEEEEE
+    .dr-name
+        margin-top: 10px
+        display: block
+        color: #333
+        text-align: center
+        font-size: 1rem
+        font-weight: 400
+    .dr
+        display: block
+        color: #333
+        text-align: center
+        font-size: 0.8rem
+        display: block
+        font-weight: 200 
+/*section  Pharmacist Recommended*/
+
+.pharmacist-recommended​
+    padding: 50px 0
+    background: rgb(243, 243, 243)
+    &__text
+        display: block
+        font-size: 1.2rem
+        color: #333
+        font-family: 'Oswald', sans-serif
+        font-weight: 300
+        br
+            display: none
+    &__video-wrap
+        width: fit-content
+        height: fit-content
+        position: relative 
+        margin-top: 30px
+        margin-bottom: 10px
+        .video-play
+            top: 50%                 
+            transform: translate(-50%, -50%) 
+                
+/*section  How It Works?*/
+.how-it-works
+    background: url('../img/bg/bg1.jpg') no-repeat center center
+    background-size: cover
+    padding: 40px 0 10px
+    &_bg-mob
+        display: none  
+    &__content
+        width: 580px
+    &__title
+        line-height: 1.2em
+        font-size: 2.33rem
+        font-weight: 300
+        color: #28598E
+        font-family: 'Arimo', sans-serif
+        span
+            color: $brightBlue
+            font-weight: 700
+            font-family: "Roboto",sans-serif
+    &__text
+        color: #0e437e
+        font-size: 1rem
+        line-height: 1.4em
+        font-family: 'Arimo', sans-serif
+        font-weight: 200
+    .advanteges
+        &__item
+            display: flex
+            margin-bottom: 35px
+            width: 500px
+            color: #0e437e
+            font-family: 'Open Sans', sans-serif !important
+            font-weight: bold !important
+            img
+                width: 60px 
+                height: 60px 
+        &__descr
+            font-family: 'Arimo', sans-serif
+            font-size: 0.68rem
+            line-height: 1.4em
+            margin-left: 25px
+            span
+                display: block
+                font-family: 'Open Sans', sans-serif
+                font-size: 0.85rem
+                font-weight: 700 !important
+                margin-bottom: 5px
+/*section Q&A*/        
+.q-and-a
+    padding: 30px 0
+    margin-bottom: -30px
+    background-color:  rgb(242, 249, 255)
+    .container
+        display: grid
+        display: -ms-grid
+        gap: 10px
+        grid-template-columns: 8fr 1fr 
+        -ms-grid-columns: 8fr 10px 1fr 
+    &__content
+        color: #376496
+        font-size: 1.4rem
+        line-height: 1.4em
+        font-family: 'Arimo', sans-serif
+        .orange-text
+            color: $orange
+            font-weight: 600
+            font-family: arial
+   
+
+/*section What to expect*/
+.what-to-expect
+    margin-top: 25px
+    background-image: url('../img/bg/bg2.jpg')
+    background-repeat:  no-repeat
+    background-position: center center
+    background-size: 100% 100%
+    .container
+        display: none
+    &__bg-mob
+        display: none
+
+/*section HAIR RESCUE RX*/
+.hair-rescue
+    padding-bottom: 40px
+    color: #3d3d3d
+    font-size: 31px
+    font-family: 'Arimo', sans-serif
+    font-weight: 400
+    .orange-text
+        font-weight: 600
+        color: $orange
+    .blue-text
+        color: $brightBlue
+/*section about efficiency*/
+.about-efficiency
+    padding: 70px 0
+    color: #28598e
+    font-family: 'Arimo', sans-serif
+    background-image: url('../img/bg/bg3.jpg') 
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+    &__title
+   
+        font-size: 2rem
+        line-height: 1.2em
+        font-weight: normal
+        .blue-text
+            color: $brightBlue
+            font-family: 'Open Sans', sans-serif
+            font-weight: 700
+    &__image
+        display: none
+    &__descr
+        font-size: 1rem
+        line-height: 1.4em
+    &__content
+        li
+           
+            font-size: 0.68rem
+            line-height: 1.4em
+            list-style: none
+            span
+                display: block
+                font-size: 0.8rem
+                line-height: 1.2em
+                font-weight: 500
+                padding: 0 0 15px 20px
+                &::before
+                    content: ''
+                    display: inline-block
+                    height: 16px
+                    width: 16px
+                    border-radius: 50%
+                    background-color: #00CCCC
+                    margin-right: 5px
+            p
+                margin-left: 45px
+/*section with real stories*/
+.real-stories
+    padding: 40px 0
+    &__title, &__subtitle
+        font-family: 'Oswald', sans-serif
+        font-weight: 800
+        br
+            display: none
+    &__subtitle
+        display: block
+        margin-bottom: 20px
+    .video-wrap
+        margin-top: 25px
+        background: #eee
+        padding: 25px 25px 15px
+        width: 555px
+        span
+            display: block
+            color: #404040
+            font-family: Arial, serif
+            font-size: 0.8rem
+            margin-top: 15px
+
+/*feedback section*/
+.feedback
+    padding: 20px 0 30px
+    &-wrap
+        
+        display: grid
+        grid-template-columns: 1fr 1fr
+        justify-content: center 
+        grid-gap: 25px
+    &__title, &__subtitle
+        font-family: 'Oswald', sans-serif
+        font-weight: 800
+    &__subtitle
+        display: block
+        margin-bottom: 30px 
+        br
+            display: none
+    &__content
+        
+        &-wrap
+            display: flex
+            gap: 30px
+            width: auto
+            height: 310px  
+            background: #eee
+            padding: 25px
+            margin-bottom: 30px
+        &_image
+            .stars
+                margin-top: 10px
+                width: 81px
+            span
+                display: block
+                font-size: 0.8rem
+                font-family: Arial, serif
+                color: #333
+        &_text
+            font-size: 0.65rem
+            color: #333
+            text-align: left
+            font-weight: 300
+            
+/*section with information on how to use*/
+.about-usage
+    .container:nth-of-type(1)
+        border-top: 2px solid $orange
+        padding-top: 30px 
+    .container:nth-of-type(2)
+        border-bottom: 2px solid #316ed4
+        padding-bottom: 30px 
+    &__title
+        color: #333
+        line-height: 1.6em
+        font-size: 1.8rem
+        font-family: 'Open Sans Condensed', sans-serif
+        text-align: center
+        
+        span
+            font-family: 'Open Sans Condensed', sans-serif
+            color: $brightBlue
+            br
+                display: none
+    &__text
+        margin-top: 30px
+        color: #50a5f6
+        font-size: 1rem
+        line-height: 1.4em
+        font-family: 'Arimo', sans-serif
+        font-weight: 700
+        br
+            display: none
+    span:nth-of-type(3)
+        margin-right: 80px
+    .bg-mob
+        display: none
+
+/*section with information about the benefits - the final section*/
+.about-benefits
+    
+    background-image: url('../img/bg/bg4.png')
+    background-repeat: no-repeat
+    min-height: 700px 
+    margin-bottom: -72px
+    z-index: 12 !important
+    margin-top: 10px 
+    background-position: right
+    background-size: contain 
+    .tablet
+            display: none
+    &__image
+        display: none
+        
+    &__content
+        padding: 0 15px 0 0
+        margin-top: 40px
+    &__title
+        margin: 0 0 10px
+        color: $brightBlue
+        font-size: 2.66rem
+        line-height: 1.2em
+    &__subtitle
+        margin: 0
+        display: block
+        font-size: 1.4rem
+        line-height: 1.2em
+        font-family: 'Arimo', sans-serif
+        font-weight: normal
+        margin-bottom: 15px
+    &__text
+        margin: 0
+        font-size: 0.8rem
+        font-family: Arial, serif
+        color: #333
+        br:nth-of-type(2)
+                display: none
+    &__list
+        margin-top: 20px
+        margin-left: 30px
+        list-style-image: url('../img/list-marker/marker.jpg')
+        li
+            font-size: 0.65rem
+            font-family: 'Arimo', sans-serif
+            font-weight: 700
+            padding: 0 0 10px 15px
+    .main-btn-wrap
+        justify-content: start 
+        margin-top: -10px
+        button
+            font-weight: 700
+.link-block
+    position: relative
+.footer-link-wrap
+    z-index: 13
+    position: absolute
+    bottom: -150px
+    left: 15px
+    list-style: none
+    cursor: pointer
+    li 
+        display: inline-block
+        font-size: 13px
+        color: #fff
+        font-weight: 500
+        a
+            font-size: 13px
+            color: #fff  
+    li:hover
+        color: blue
+    span
+        font-size: 14px 
+        color: rgb(57, 58, 87)
+/*footer*/
+.footer
+    z-index: -2
+    position: relative
+    padding: 40px 0px 40px
+    background-color: rgb(66, 67, 98)
+    color: #fff
+    font-size: 14px
+    line-height: 1.4
+    img
+        width: 135px
+        margin-bottom: 5px
+    .copyright
+        font-size: 12.8px
+        font-weight: 300
+        margin-bottom: 50px
+    
+       
+    p 
+        max-width: 550px
+    
+/*packages*/
+.packages
+    .container
+        width: 945px
+        .packages__header
+            background-color: rgb(46, 189, 0)
+            margin-top: 45px
+            height: 85px
+            color: #fff
+            text-align: center
+            h1
+                font-size: 1.6rem
+                padding: 10px 0 0
+                margin: 0
+                font-weight: 600
+            span
+                margin-top: -5px
+                font-weight: 300
+                display: block
+                font-size: 0.8rem
+    &__text
+            font-size: 1.4rem
+            font-weight: 300
+            color: #333
+            .dark-blue
+                color: rgb(3, 34, 88)
+                font-weight: 600
+            .blue
+                color: rgb(63, 108, 177)
+                font-weight: 700
+    &__row
+        a
+            display: block
+            margin-bottom: 20px
+            border: 2px solid rgb(202, 202, 202)
+            text-decoration: none
+        .package
+            &__top
+                margin-top: 20px
+                border-top: 3px solid #5686df
+                border-bottom: 3px solid #5686df
+                display: flex
+                padding: 0 40px
+                span
+                    display: inline-block
+                    font-family: "Oswald", sans-serif
+                    font-weight: 600
+                    font-size: 25px
+                .purple
+                    color: #a44eba
+                .blue
+                    color: #5686df
+                    margin-right: auto
+            &__content
+                display: grid
+                
+                display: -ms-grid
+                grid-template-columns: 2fr 1fr
+                img
+                   margin: 20px  0 20px auto
+                   width: 85%
+                p
+                    margin-left: 15px
+                .blue-text
+                    margin-top: 30px
+                    color: #4e93c7
+                    font-size: 24px
+                    line-height: 1.4
+                    margin-bottom: 0.5rem
+                .price
+                    color: #000
+                    font-family: "Oswald", sans-serif
+                    font-size: 42px
+                    font-weight: 500
+                    position: relative
+                    width: fit-content
+                    sub
+                        font-size: 20px
+                        font-weight: normal
+                        display: block
+                        position: absolute
+                        left: 100%
+                        top: 70%
+                .select
+                    margin-left: 15px
+                    margin-bottom: 1rem
+                    font-weight: 600
+                    font-size: 28px
+                    background: #f07d3e
+                    padding: 0 3px  
+                    border-radius: 5px
+                    font-family: "Oswald", sans-serif
+                    color: #fff
+                    width: fit-content
+                    
+
+        
+    .package__bottom-mob
+        display: none
+    img
+        width: 100%
+    .timer
+        margin-top: 30px
+        display: flex
+        justify-content: center
+        gap: 10px
+        &-wrap
+            margin: 90px 0 0
+            span
+                font-size: 1.2rem
+                font-family: "Oswald", sans-serif
+                display: block
+                text-align: center
+                font-weight: bold
+        &__item
+            width: 120px
+            border: 1px solid  #d34e3c
+            border-radius: 4px 
+            color: #d34e3c
+            .title
+                font-weight: 400
+                font-size: 14px
+                margin-top: 10px
+                
+            .num
+                font-size: 60px
+                line-height: 91px
+                font-weight: 500
+                font-family: "Oranienbaum",cursive
+             
+    .guarantee
+       
+        &-wrap
+            
+            display: flex
+            align-items: center
+            gap: 30px
+            margin-top: 50px
+        span
+            font-size: 1.2rem
+            font-family: "Oswald", sans-serif
+            font-weight: bold
+            display: block
+            margin-bottom: 15px
+        p
+            line-height: 1.4em
+            font-size: 0.8rem
+            font-weight: 300
+            b
+                font-weight: bold
+    .image-row
+        margin-top: 50px
+
+        a
+                width: 700px
+                margin: 0 auto 40px
+                display: block
+        a:nth-of-type(2)
+            width: 605px
+
+.mobile-optin
+    padding-top: 50px
+    img
+            width: 100%
+            
+    .mobile-form
+        margin-top: 40px
+        position: relative
+        input
+            width: 100%
+            height: 45px
+            margin-bottom: 15px
+            padding: 5px 10px 5px 45px
+            border: 1px solid rgba(0,0,0,0.2)
+            border-radius: 6px
+            &::placeholder 
+                font-family: 'Open Sans', sans-serif
+                color: rgba(0,0,0,0.4)
+                font-size: 16px
+                font-weight: 600
+            
+                top: 90px
+            
+        .red-star
+            color: rgb(255, 26, 13)
+            position: absolute
+            font-size: 15px
+            font-weight: 700
+            &:nth-of-type(1)
+                top: 5px
+                right: 5px
+            &:nth-of-type(2)
+                top: 65px
+                right: 5px
+                
+        input[name="first-name"], input[name="last-name"]
+            background: url('../img/inputs-icons/user.jpg') no-repeat 10px 10px
+            background-size: 20px
+        input[name="email"] 
+            background: url('../img/inputs-icons/letter.jpg') no-repeat 10px 15px
+            background-size: 25px
+        input[type="submit"]
+            background: rgb(92, 21, 122)
+            color: #fff
+            line-height: 1.3
+            text-align: center
+    p
+        text-align: center
+        margin-top: 20px
+        font-weight: 300 
+    .image-block
+        margin-bottom: 15px
+        .verified
+            padding-bottom: 15px
+    &__footer
+        text-align: center
+        font-size: 300
+        .copyright
+            font-size: 0.80rem 
+        .footer__text
+            font-size: 0.6rem
+
+@media (min-width: 1801px) and (max-width: 1980px)
+    .about-benefits 
+        background-position: 80% 
+
+@media (min-width: 1601px) and (max-width: 1800px)
+    .about-benefits
+        background-position: 85% 
+@media (min-width: 1430px) and (max-width: 1600px)
+    .about-benefits
+        background-position: 95% 
+    
+@media (min-width: 1308px) and (max-width: 1430px)
+    .about-benefits
+        background-position: 100% 
+
+@media (max-width: 1307px)
+    .about-benefits
+        background-position: 110% 
+
+
+
+        
+
+@media (min-width: 1281px)
+    html 
+        font-size: 1.6rem
+    
+@media (max-width: 1280px)
+    html 
+        font-size: calc(0.8rem + 1.2 * ((100vw - 20rem) / 80))
+    .about-benefits__content
+        width: 585px !important
+    .about-benefits__title
+        width: 500px 
+
+    
+
+@media ( max-width: 1199px  )
+    .main-form
+        width: 282px 
+        input, select
+            width: 232px
+            margin-left: auto
+            margin-right: auto
+        .for-form
+            width: 210px
+        
+    .first-screen-main 
+       margin-left:   -100px
+    .about-product
+        
+        &__content
+            width: 441px
+        .magzine-men_fin
+            width: 498px
+            margin-left: 50px
+   
+    .real-stories
+        .video-wrap
+            width: 720px
+            margin: 0 auto 25px
+            video
+                width: 670px
+   
+    .about-usage
+        span
+            br:nth-of-type(2)
+               display: block
+        span:nth-of-type(3)
+            margin-right: 0  
+    .about-benefits__content
+        width: 485px
+        padding-right: 40px
+    .packages
+        .container
+            width: 778px
+            
+
+
+@media ( max-width: 1024px  )
+    .for-tablet
+        display: block
+    .no-form-tablet
+        display: none
+    
+    
+       
+    .main-form
+
+        width: 282px  
+        margin: 50px 0 0 -75px
+        input, select
+            width: 232px
+            margin-left: auto
+            margin-right: auto
+        .for-form
+            width: 210px
+    .h-top 
+        background-image: none !important
+        background-color: #ebf5ff 
+        background-position: 100% 100%
+        .for-tablet
+            top: 0
+            position: absolute
+            z-index: 1
+        .first-screen-main
+            display: none
+    .h-bottom
+        padding-top: 50px
+            
+    .proof
+        br
+            display: none
+        .for-tablet
+            display: block !important
+        &__text
+            text-align: center
+
+           
+        video
+            width: 720px 
+    .about-product
+        background-image: url('../img/bg/TabletMagazinPart.png') 
+
+        height: 800px
+        position: relative
+        .for-tablet
+            position: absolute
+            left: 57%
+            bottom: 70px
+        .container
+                display: none
+        
+    .hair-rescue
+        margin-top: -100px
+    .what-to-expect
+        background-image: url('../img/bg/WhatToExpect.png')
+        background-size: cover
+        margin-bottom: -30px
+        position: relative
+
+        &__subtitle
+            display: none
+        &__list
+            width: fit-content
+            margin: 10px auto
+            line-height: 1 !important
+            li
+                min-width: 200px
+                position: relative
+                span
+                    font-family: 'Arimo', sans-serif
+                    font-weight: 600
+                    font-size: 22px
+                    color: #0e437e 
+                
+                    list-style-image: url('../img/list-marker/check mark white no bkr.png')
+        .container
+            display: block
+            width: 450px
+            position: absolute
+            right: 0
+            top: 170px
+            p
+                
+                font-size: 21.5px
+                font-family: 'Arimo', sans-serif
+                color: #0e437e 
+                width: 370px
+                display: block
+                span
+                    font-weight: 700
+                    font-style: normal
+                b
+                    width: 320px
+                    margin-left: auto
+                    display: block
+                    font-size: 26px
+                    font-weight: normal
+                    font-style: italic
+
+            h2
+                display: none
+            img
+                display: none
+    .pharmacist-recommended​
+        &__text
+            br
+                display: block
+    .q-and-a
+        background-image: url('../img/bg/questionMark.png')
+        padding: 50px 0
+        img
+            display: none
+        &__content
+            font-size: 30px !important
+            line-height: 1.5
+            font-weight: 500
+    .how-it-works
+        background: none
+        &__content
+            width: 720px
+            margin: 0 auto
+        &_bg-mob
+            width: 100%
+            margin: 0 auto 40px
+            display: block
+        &__title
+            display: none
+            text-align: center
+            line-height: 1.2em
+            font-size: 2rem
+            font-family: 'Oswald', sans-serif
+            color: #333
+            span
+                font-family: 'Oswald', sans-serif
+        &__text
+            font-size: 18px
+            font-weight: 700
+            
+        .advanteges
+            &__item
+                span
+                    font-family: 'Open Sans', sans-serif
+                    font-size: 20px
+    .about-efficiency
+        padding: 50px 0
+        background-image: none
+        background-color:   rgb(220, 243, 255)
+        .for-tablet
+            width: 100%
+            margin-bottom: 30px
+        &__title
+            display: none !important
+            text-align: center
+            font-weight: 300
+            margin-bottom: 10px
+            display: block
+            font-size: 2.33rem
+            color: rgb(9, 135, 255)
+            font-family: 'Oswald', sans-serif
+            .blue-text
+                font-family: 'Oswald', sans-serif
+        
+        &__descr
+                color: rgb(51, 51, 51)
+                font-family: arial
+                margin-left: 65px 
+        &__content
+            margin-left: 65px 
+            li
+                line-height: 1.5
+                span
+                    font-weight: bold
+                    font-family: arial
+                    color: rgb(9, 135, 255)
+    .about-efficiency
+        &__descr
+            font-size: 1.1rem
+        &__content
+            li
+                font-size:  0.83rem
+                span
+                    font-size: 1.30rem
+    .what-to-expect
+        img
+            width: 100%
+    .feedback-wrap
+            grid-template-columns: 1fr
+            justify-content: center 
+            gap: 0
+
+            .feedback__content-wrap
+                
+                max-width: 720px
+            .feedback__content_text
+                font-size: 21px
+    .feedback__subtitle
+        br
+            display: block !important
+    .about-usage
+        .container
+            display: none
+    .about-benefits
+        background-image: url('../img/bg/TabletHairManBottom.png')
+        background-size: cover
+        background-position: 120% 
+        margin-bottom: -80px
+
+        &__title
+            display: none
+        h2
+            display: none
+        &__subtitle
+            display: none
+        &__text
+            display: none
+        &__list
+            display: none
+        .main-btn-wrap
+            margin-top: 620px
+            margin-bottom: 40px
+            margin-left: 100px
+    .guarantee
+        margin-left: 80px
+        &-wrap
+            display: block !important
+            img
+                width: 60px
+@media ( max-width: 1023px )
+    .fixed-btn
+        display: flex
+    .for-tablet
+        display: none
+    .no-form-tablet
+        display: block
+    .main-form
+        display: none
+    .h-top
+        background-image: url("img/first-screen/first-screen-mob.jpg")
+        background-position: center center
+        padding: 0
+        height: auto !important
+        .row
+            display: none
+        
+        .first-screen-mob
+            display: block
+            margin: 0 auto
+            width: 100%
+    .h-bottom
+        padding-top: 30px        
+    .about-product
+        height: auto
+        background-image: none 
+        width: 940px
+        margin: 0 auto
+        &__content
+            width: 441px
+        .magzine-men_fin
+            margin-left: 150px
+    
+        .container
+            display: grid
+            display: -ms-grid
+            gap: 10px
+            grid-template-columns: 5fr 1fr !important
+            -ms-grid-columns:  5fr 10px 1fr
+            img
+                height: auto
+                width: 100% !important
+        .main-btn-wrap
+            display: none
+    .pharmacist-recommended​
+        .main-btn-wrap
+            display: none
+    .q-and-a
+        padding: 30px 0
+        background-color:  rgb(242, 249, 255)
+        background-image: none
+        .container
+            display: grid
+            display: -ms-grid
+            gap: 10px
+            grid-template-columns: 8fr 1fr 
+            -ms-grid-columns:  8fr 10px 1fr
+            img
+                display: block
+        &__content
+            color: #376496
+            font-size: 1.4rem
+            line-height: 1.4em
+            font-family: 'Arimo', sans-serif
+            .orange-text
+                color: $orange
+                font-weight: 600
+                font-family: arial
+    .how-it-works
+        &_bg-mob
+            display: block
+            width: 720px
+            margin: 0 auto 15px
+    .about-efficiency
+        &__descr
+            margin-left: 0
+        &__content
+            margin-left: 0
+        &__image
+            display: block
+            width: 100%
+            margin: 15px auto
+        &__title
+            display: block !important
+    .hair-rescue
+        display: none
+    .what-to-expect
+        background-image: none !important
+        background-color: rgb(109, 207, 246)
+        height: auto !important
+        padding: 40px 0
+        position: static
+        .container
+            display: block
+            position: static !important
+            width: 100% !important
+            h2
+                display: block !important
+            img
+                display: block !important
+                width: 100%
+                margin: 0 auto
+        &__title    
+            color: #fff    
+            font-family: 'Oswald', sans-serif
+            font-size: 2.33rem
+            line-height: 1.4em
+            font-weight: 600
+            text-align: center
+            display: block
+        &__subtitle
+            display: block !important
+            text-align: center
+            font-size: 1.6rem
+            font-family: 'Arimo', sans-serif
+            color: #0e437e
+            font-style: italic
+ 
+        p
+            width: 100% !important
+            font-size: 0.8rem
+            font-family: 'Arimo', sans-serif
+            color: #0e437e
+            margin: 0
+            b
+                font-family: 'Roboto', sans-serif
+                color: #4B6A71
+                font-size: 1rem
+                margin-left: 0 !important
+                br
+                    display: none
+        &__list
+            margin-left: 50px !important
+            
+            li
+                list-style-image: url('../img/list-marker/marker2.jpg') !important
+                font-size: 20px
+                font-family: 'Arimo', sans-serif
+                font-weight: 500  
+                color: #353535
+                padding: 10px
+    .what-to-expect
+        &__bg-mob
+            display: block
+            width: 100%
+        .container
+           display: none
+    .feedback
+        &__content
+            &-wrap
+                flex-direction: column
+                width: 720px
+                height: auto
+                margin: 0 auto 
+            &_image
+                
+                width: 200px
+                margin: 0 auto
+            &_text
+                font-size: 0.65rem
+    .about-usage
+        h2
+            br
+                display: none !important
+        .container:nth-of-type(1)
+            display: block
+            br
+                display: block
+        .container:nth-of-type(2)
+            padding-top: 20px
+            padding-bottom: 0
+            display: flex
+            justify-content: space-around
+            
+            .col-lg-12
+                flex-direction: column
+                gap: 30px
+        img:nth-of-type(1)
+            width: 90px
+        img:nth-of-type(2), img:nth-of-type(4)
+            width: 51px
+        img:nth-of-type(3)
+            width: 152px
+        img:nth-of-type(5)
+            width: 161px
+        .text-row
+            align-items: center
+            margin: auto
+            height: 650px
+            justify-content: space-between !important
+        span
+            text-align: center
+            margin: 0
+        br:nth-of-type(2)
+            display: none
+        br:nth-of-type(1)
+            display: none
+    .about-benefits
+        background: none
+        &__content
+            
+            width: auto
+            padding-right: 0
+            
+        &__image
+            display: block
+            width: 100%
+            padding: 10px
+            img
+                padding-bottom: 80px
+                width: 100%
+        &__title
+            display: block !important
+            color: rgb(9, 135, 255)
+            width: 100%
+            text-align: center
+            font-size: 2.8rem
+        &__subtitle
+            display: block
+            line-height: 1.4em
+            text-align: center
+        &__text
+            display: block
+            font-size: 0.95rem
+            br:nth-of-type(1)
+                display: none
+            br:nth-of-type(2)
+                display: block
+        &__list
+            display: block
+            li
+                font-size: 0.80rem
+        .main-btn-wrap
+            display: none
+@media (max-width: 991px)
+    .orange-subtitle
+        font-size: 1.5rem
+    .h-bottom
+        &__text
+            display: none
+        .image-row-top
+             width: 478px
+             margin: 0 auto
+        .image-row-bottom
+            display: none
+    .proof
+        &__subtitle
+            font-size: 1.5rem
+        &__text
+            font-size: 1.3rem
+    .about-product
+        width: 720px
+        &__title
+            font-size: 2.6rem
+        &__content
+          width: 120% !important
+        p
+            font-size: 0.95rem
+        .magzine-men_fin
+            margin: 0 auto
+            width: 100%
+        .main-btn-wrap
+            display: none
+    .physicians-choice
+        padding-bottom: 0
+        &__subtitle
+            font-size: 1.5rem
+        video
+            width: 720px
+        .dr
+            margin-bottom: 50px
+    .how-it-works
+        &__text
+            font-size: 0.8rem
+        .advanteges
+            &__item
+                gap: 0 !important
+            &__descr
+                margin-left: 25px
+                font-size: 0.83rem
+                span
+                    font-size: 0.95rem
+    .what-to-expect
+        p
+            font-size: 0.77rem
+            b
+                font-size: 1.1rem
+        &__list
+            li
+                font-size: 0.77rem
+    .q-and-a__content
+        font-size: 1.5rem
+    
+    .pharmacist-recommended​
+        &__text
+            display: block
+            font-size: 1.3rem
+
+    .real-stories
+        .video-wrap
+            margin-bottom: 25px !important
+            span
+                font-size: 0.95rem
+    .about-usage
+        &__text
+            font-size: 1.1rem
+    .feedback__content 
+            &_image
+                span
+                    font-size: 0.95rem
+            &_text
+                font-size: 0.77rem
+    .packages
+        .container
+            width: 720px
+        .timer
+            &-wrap
+                span
+                    font-size: 1.3rem
+            &__item
+                width: 100px
+                .num
+                    font-size: 32px
+                    line-height: 66px
+        .guarantee
+            span
+                font-size: 1.30rem 
+            p
+                font-size: 0.95rem 
+    .mobile-optin
+        p
+            font-size: 1.10rem 
+    .footer
+        p
+            max-width: 100%
+@media (max-width: 767px)
+    .header-mob   
+        display: block
+        
+    .orange-subtitle
+        font-size: 1.55rem
+    .h-top
+        .container
+            width: 100% 
+            margin: 0
+            padding: 0 
+        .first-screen-mob
+            width: 100vw
+    .proof
+        &__title 
+            width: 100% !important
+        &__subtitle
+            font-size: 1.55rem
+        &__text
+            font-size: 1.4rem   
+            br.for-tablet 
+                display: none !important 
+        video
+            width: 100%
+    .about-product
+        width: 95%
+        &__title
+            br
+                display: none
+        p
+            font-size: 1.1rem
+    .physicians-choice
+        padding-bottom: 0
+        &__subtitle
+            font-size: 1.55rem
+        
+        video
+            width: 100%
+        .video-play
+                transform: translate(-50%, -250%)
+        .dr, .dr-name
+            font-size: 1.65rem
+        .dr
+            margin-bottom: 50px
+    .what-to-expect
+        &__subtitle
+            font-size: 1.65rem 
+        p
+            font-size: 0.92rem
+            b
+                font-size: 1.20rem
+        &__list
+            li
+                font-size: 0.92rem
+    .pharmacist-recommended​
+        &__text
+            display: block
+            font-size: 1.4rem
+    .q-and-a
+        &__content
+            font-size: 1.55rem
+    .how-it-works
+        &__text
+            font-size: 0.95rem
+        &__content
+            width: 100%
+        &_bg-mob
+            width: 90%
+        .advanteges
+            &__item
+                width: 100%
+                img
+                    width: 30px !important
+                    height: 30px !important
+            &__descr
+                font-size: 0.98rem
+                span
+                    font-size: 1.15rem
+    .about-efficiency
+        &__descr
+            font-size: 1.2rem
+        &__content
+            li
+                font-size:  0.98rem
+                span
+                    font-size: 1.4rem
+    .real-stories
+        .video-wrap
+            margin: 0 auto 25px
+            width: 100%
+            video
+                width: 100%
+            span
+                font-size: 1.1rem
+    .about-usage
+        .container:nth-of-type(2)
+            justify-content: start
+            gap: 50px
+            
+        &__text
+            font-size: 1.20rem
+   
+        img:nth-of-type(1)
+            width: 69px
+        img:nth-of-type(3)
+            width: 118px
+        img:nth-of-type(5)
+            width: 136px
+        .text-row
+            align-items: start
+            margin: 0
+            height: 560px
+            justify-content: space-between !important
+    .feedback
+        &__content
+            &-wrap
+                width: 90%
+            &_image
+                span
+                    font-size: 1.10rem
+            &_text
+                font-size: 0.92rem
+    .about-benefits
+        &__content 
+            width: 100% !important
+
+        &__title
+            color: rgb(9, 135, 255)
+        &__subtitle
+            text-align: center
+        &__text
+            font-size: 1.1rem
+        &__list
+            li
+                font-size: 0.95rem
+    .packages
+        .container
+            width: 95%
+            margin: 0 auto
+        .package__content
+            .select
+                display: none
+        .package
+            &__top
+                margin-top: 10px
+                border-top: 2px solid #5686df
+                border-bottom: 2px solid #5686df
+                display: flex
+                padding: 0 30px
+                span
+                    display: inline-block
+                    font-family: "Oswald", sans-serif
+                    font-weight: 600
+                    font-size: 1rem
+            &__content
+                img
+                    margin-bottom: 0
+                    margin-top: 0.5rem
+                .blue-text
+                    margin-top: 1rem
+                    color: #4e93c7
+                    font-size: 0.9rem
+                    margin-bottom: 0.5rem
+                .price
+                    font-size: 1.6rem
+                    sub
+                        font-size: 0.6rem
+        .package__bottom-mob
+                display: block
+                width: 100%
+                background: #f07d3e
+                color: #fff
+                font-size: 1.6rem
+                line-height: 1.2
+                font-weight: 500
+                text-align: center
+                position: relative
+                .mark
+                    position: absolute
+                    background: transparent
+                    color: #fff
+                    font-size: 3rem
+                    line-height: 0.1em
+
+        .timer
+            &-wrap
+                span
+                    font-size: 1.4rem
+            &__item
+                width: 70px
+                .num
+                    font-size: 32px
+                    line-height: 66px
+        .guarantee
+            span
+                font-size: 1.4rem 
+            p
+                font-size: 1.1rem 
+        .image-row
+            a
+                width: 100%
+            a:nth-of-type(2)
+                width: 100%
+        
+    .mobile-optin
+        p
+            font-size: 1.20rem 
+        &__footer
+            display: none
+
+@media (max-width: 500px)
+    .image-row-top
+            width: 100% !important
+            img
+                width: 100%
+@media (max-width: 480px)
+    .header-mob   
+        &_top
+            font-size: 1.07rem
+        &_bottom
+            p
+                font-size: 1.25rem
+            img
+                width: 50% !important
+                margin-top: -10px
+                margin-left: auto 
+                margin-right: auto 
+    .orange-subtitle
+        font-size: 1.60rem
+    .about-product
+        p
+            font-size: 1.25rem
+    /*section What to expect*/
+    .proof
+        &__subtitle h3
+            font-size: 1.60rem
+            br 
+                display: block 
+        &__text
+           
+            font-size: 1.50rem
+    .physicians-choice
+        &__subtitle
+            font-size: 1.6rem
+        .dr, .dr-name
+            font-size: 1.7rem
+    .how-it-works
+        &__text
+            font-size: 1.1rem
+        .advanteges
+            &__descr
+                font-size: 1.13rem
+    .pharmacist-recommended​
+        &__text
+            display: block
+            font-size: 1.5rem
+    
+        
+    .q-and-a
+        margin-bottom: -40px
+        .container
+            display: grid
+            display: -ms-grid
+            gap: 10px
+            grid-template-columns: 8fr 1fr 
+            -ms-grid-columns: 8fr 10px 1fr 
+            img
+                max-height: 130px 
+        &__content
+            color: #000
+            font-size: 1.6rem !important
+            font-weight: normal
+            font-family: 'Roboto', sans-serif
+            .bottom-text-wrap
+                display: block
+                margin-top: 20px
+            .orange-text
+                color: $orange
+                font-weight: 600
+                font-family: arial
+ 
+    .about-efficiency
+        br
+            display: none
+        &__descr
+            font-size: 1.3rem
+        &__content
+            li
+                font-size:  1.13rem
+                span
+                    font-size: 1.5rem
+    .how-it-works
+        &__title
+            font-size: 26px
+        &__text
+            font-size: 14.5px
+        .advanteges
+            &__item
+                span
+                    font-size: 16.5px
+    .real-stories
+        padding-bottom: 30px
+        &__subtitle
+            br
+                display: block
+    /*section with information on how to use*/
+    .about-usage
+        .container
+            display: none !important
+        .bg-mob
+            border-top: 2px solid $orange
+            border-bottom: 2px solid #316ed4
+            display: block
+            width: 100% !important
+    .feedback
+        padding-top: 0
+        &__content
+            &_image
+                span
+                    font-size: 1.10rem
+            &_text
+                font-size: 1.07rem
+    .about-benefits
+        &__text
+            font-size: 1.25rem
+        &__list
+            li
+                font-size: 1.1rem
+    .packages
+        .package
+            
+            &__top
+                padding: 0 1rem
+                span
+                    font-size: 0.9rem
+        .timer
+            &-wrap
+                span
+                    font-size: 1.5rem
+            &__item
+                width: 58px
+                .title
+                    font-size: 12px
+                .num
+                    font-size: 24px
+                    line-height: 51px
+        .guarantee
+            margin-left: 0
+            &-wrap
+                display: flex !important
+                align-items: start
+                gap: 30px
+                img
+                    width: 122px
+            span
+                font-size: 1.5rem 
+            p
+                font-size: 1.25rem 
+    .mobile-optin
+        .mobile-form
+            input[type="submit"]   
+                line-height: 1.3
+                font-size: 20px
+                padding: 12px 12px 
+        p
+            font-size: 1.30rem
+@media  ( max-width: 400px )
+    .proof__text
+        br
+            display: none !important
+    .footer-link-wrap
+        bottom: -150px
+    .copyright
+        margin-bottom: 60px
+    .physicians-choice
+        .video-play
+                transform: translate(-50%, -230%)
+@media ( max-width: 310px )
+    .footer-link-wrap
+        bottom: -170px
+    
+@media  ( max-width: 345px )
+    .feedback__content_image
+            width: 100%
+            .human
+                width: 100%
+    .fixed-btn
+        width: 100%
+    .timer
+        flex-wrap: wrap
+@media (max-width: 1023px) and (orientation: landscape) 
+
+    .wrapper
+        width: 100vw  !important
+@media (max-width: 1023px) and (orientation: portrait)    
+
+    .wrapper
+        width: 100vw  !important
+   
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) 
+    .package
+            &__content
+                display: flex !important
+                margin-right: 15px !important    
+                img
+                   width: 55% !important
+                   height: auto
+                p
+                    margin-left: 15px
+                    margin-bottom: 0.5rem
+                .price
+                    sub
+                        position: static !important
+                        display: inline !important
+    .guarantee-wrap
+        img
+            height: auto
+            width: auto
+    .h-top
+        .first-screen-image 
+            margin-top: 20px !important
+    .main-form
+        &__inputs
+            display: flex
+            flex-direction: column 
+            input, select
+                margin: 0 auto 10px
+            select::-ms-expand 
+                display: none
+    .q-and-a
+        .container
+            display: flex
+            img
+                margin-left: 10px
+    .what-to-expect
+        height: 750px
+        background-size: contain
+        background-position: auto
+    .feedback
+        &-wrap
+            
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            .content-wrap
+                width: 49% 
+        &__content_text
+            margin-left: 25px
+    .advanteges__item
+        img
+            width: auto !important
+            height: 60px 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) and (max-width: 1199px)   
+    .feedback
+        &-wrap
+            .content-wrap
+                width: 720px
+                margin: 0 auto  
+    
